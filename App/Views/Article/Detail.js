@@ -5,6 +5,8 @@ var styles = require('../Style/ArticleDetail');
 var Api = require('../../Network/api');
 var Loading = require('../Common/Loading');
 var Tags = require('../Tag/List');
+var ParseHTML = require('../Common/ParseHTML');
+var ParseRule = require('../Common/ParseRule');
 
 var FakeApi = require('../../Network/fakeapi');
 
@@ -71,7 +73,9 @@ var ArticleDetail = React.createClass({
               </View>
           </View>
           <View style={styles.questionContent}>
-            <Text>{this.state.article.originalText}</Text>
+            <ParseHTML 
+              code={this.state.article.parsedText}
+              customTagToStyle={ParseRule}/>
           </View>
           <Tags data={this.state.article.tags} />
         </View>

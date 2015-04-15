@@ -7,6 +7,7 @@ var Loading = require('../Common/Loading');
 var Tags = require('../Tag/List');
 var AnswerCell = require('./Answer');
 var ParseHTML = require('../Common/ParseHTML');
+var ParseRule = require('../Common/ParseRule');
 
 var FakeApi = require('../../Network/fakeapi');
 
@@ -83,7 +84,9 @@ var QuestionDetail = React.createClass({
               </View>
           </View>
           <View style={styles.questionContent}>
-            <Text>{this.state.question.originalText}</Text>
+            <ParseHTML 
+              code={this.state.question.parsedText}
+              customTagToStyle={ParseRule}/>
           </View>
           <Tags data={this.state.question.tags} />
           <View style={styles.questionMenu}>
