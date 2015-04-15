@@ -7,3 +7,6 @@
 
 # Install
 `npm install`
+
+# License
+MIT
