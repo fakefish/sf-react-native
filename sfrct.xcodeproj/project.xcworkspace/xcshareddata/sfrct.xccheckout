@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AB141F87-80D8-4753-AE51-176ED8985870</string>
+	<key>IDESourceControlProjectName</key>
+	<string>sfrct</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0C530C39BFEBCA992D114A113FA49283713BF647</key>
+		<string>github.com:SegmentFault/sf-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>sfrct.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0C530C39BFEBCA992D114A113FA49283713BF647</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:SegmentFault/sf-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0C530C39BFEBCA992D114A113FA49283713BF647</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0C530C39BFEBCA992D114A113FA49283713BF647</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sf-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
