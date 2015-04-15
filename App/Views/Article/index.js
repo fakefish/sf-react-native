@@ -2,9 +2,9 @@
 
 var React = require('react-native');
 var Api = require('../../Network/api');
-var ArticleDetail = require('./detail');
-var Loading = require('../Common/loading');
-
+var ArticleDetail = require('./Detail');
+var Loading = require('../Common/Loading');
+var styles = require('../Style/Article');
 
 var FakeApi = require('../../Network/fakeapi');
 
@@ -63,17 +63,16 @@ var ArticleNewest = React.createClass({
 
   renderRow: function(rowData: string, sectionID: number) {
     return (
-          <TouchableHighlight onPress={() => this.selectDetail(rowData.id)}>
-            <View>
-              <View style={{flexDirection:'row',flex:2}}>
-                <View style={{}}>
-                  <Text style={{fontWeight:'bold',fontSize:16}}>{rowData.title}</Text>
-                  <Text numberOfLines={2}>{rowData.excerpt}</Text>
-                </View>
-                <Image 
-                  style={{width:32,height:32}} 
-                  source={{uri:'http:'+rowData.user.avatarUrl}}/>
+          <TouchableHighlight  onPress={() => this.selectDetail(rowData.id)}>
+            <View style={styles.container}>
+              
+              <View style={{flex:1}}>
+                <Text style={{fontWeight:'bold',fontSize:16}}>{rowData.title}</Text>
+                <Text>{rowData.excerpt}</Text>
               </View>
+              <Image 
+                style={{width:32,height:32,borderRadius:16}} 
+                source={{uri:rowData.user.avatarUrl}}/>
             </View>
           </TouchableHighlight>
     );

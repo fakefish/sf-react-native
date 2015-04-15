@@ -12,22 +12,38 @@
 	<dict>
 		<key>0C530C39BFEBCA992D114A113FA49283713BF647</key>
 		<string>github.com:SegmentFault/sf-ios.git</string>
+		<key>2C609F9941815CBD525DFA4C95BD9B113418B087</key>
+		<string>github.com:fakefish/sf-react-native.git</string>
+		<key>6B6B51F856808F867025552528933EC4CDF03E50</key>
+		<string>github.com:fakefish/react-demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>sfrct.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0C530C39BFEBCA992D114A113FA49283713BF647</key>
+		<string>../../../sf-ios</string>
+		<key>2C609F9941815CBD525DFA4C95BD9B113418B087</key>
 		<string>../..</string>
+		<key>6B6B51F856808F867025552528933EC4CDF03E50</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:SegmentFault/sf-ios.git</string>
+	<string>github.com:fakefish/sf-react-native.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0C530C39BFEBCA992D114A113FA49283713BF647</string>
+	<string>2C609F9941815CBD525DFA4C95BD9B113418B087</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6B6B51F856808F867025552528933EC4CDF03E50</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
@@ -35,6 +51,14 @@
 			<string>0C530C39BFEBCA992D114A113FA49283713BF647</string>
 			<key>IDESourceControlWCCName</key>
 			<string>sf-ios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2C609F9941815CBD525DFA4C95BD9B113418B087</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sf-react-native</string>
 		</dict>
 	</array>
 </dict>

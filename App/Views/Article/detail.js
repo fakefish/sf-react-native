@@ -1,11 +1,10 @@
 'use strict';
 
 var React = require('react-native');
-var styles = require('../Style/article-detail');
+var styles = require('../Style/ArticleDetail');
 var Api = require('../../Network/api');
-var Loading = require('../Common/loading');
-var Tags = require('../Tag/list');
-var Markdown = require('../Common/Markdown');
+var Loading = require('../Common/Loading');
+var Tags = require('../Tag/List');
 
 var FakeApi = require('../../Network/fakeapi');
 

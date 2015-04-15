@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react-native');
-var NewestQuestion = require('../Question/index');
-var NewestArticle = require('../Article/index');
+var NewestQuestion = require('../Question/Index');
+var NewestArticle = require('../Article/Index');
 
 var {
   TabBarIOS,

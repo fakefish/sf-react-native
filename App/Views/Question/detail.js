@@ -1,12 +1,12 @@
 'use strict';
 
 var React = require('react-native');
-var styles = require('../Style/question-detail');
+var styles = require('../Style/QuestionDetail');
 var Api = require('../../Network/api');
-var Loading = require('../Common/loading');
-var Tags = require('../Tag/list');
-var Markdown = require('../Common/Markdown');
-var AnswerCell = require('./answer');
+var Loading = require('../Common/Loading');
+var Tags = require('../Tag/List');
+var AnswerCell = require('./Answer');
+var ParseHTML = require('../Common/ParseHTML');
 
 var FakeApi = require('../../Network/fakeapi');
 

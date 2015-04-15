@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react-native');
-var styles = require('../Style/question-detail');
+var styles = require('../Style/QuestionDetail');
 
 var {
   Image,
