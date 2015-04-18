@@ -2,6 +2,8 @@
 
 var React = require('react-native');
 var styles = require('../Style/QuestionDetail');
+var ParseHTML = require('../Common/ParseHTML');
+var ParseRule = require('../Common/ParseRule');
 
 var {
   Image,
@@ -30,7 +32,9 @@ var answerCell = React.createClass({
           <Text>&middot; {answer.createdDate?answer.createdDate:answer.modifiedDate}</Text>
         </View>
         <View>
-          <Text>{answer.originalText}</Text>
+          <ParseHTML 
+            code={answer.parsedText}
+            customTagToStyle={ParseRule}/>
           {isAccepted?(
             <Text style={{color:'#009A61'}}>该问题已被采纳</Text>
             ):(
