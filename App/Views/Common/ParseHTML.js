@@ -18,8 +18,10 @@ var ParseHTML = React.createClass({
   getInitialState: function() {
     var defaultTagToStyle = {
                               '<b>': {fontWeight: 'bold'},
+                              '<strong>': {fontWeight: 'bold'},
                               '<i>': {fontStyle: 'italic'},
                               '<normal>': {fontStyle: 'normal'},
+                              '<em>': {fontStyle: 'italic'},
                             };
     if(this.props.customTagToStyle){
       for(var i in Object.keys(this.props.customTagToStyle)){
