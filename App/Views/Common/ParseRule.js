@@ -22,19 +22,14 @@ module.exports = {
     borderColor: '#ccc',
     paddingLeft: 10,
   },
-  '<ol>': {
-    marginLeft: 10,
-  },
-  '<li>': {
-
-  },
   '<strong>': {
-    fontWeigth: 'bold',
+    fontWeight: 'bold',
   },
   '<p>': {
     fontSize:14,
     padding:0,
-    margin:0},
+    margin:0
+  },
   '<pre>': {
     backgroundColor:'#efefef'
   },

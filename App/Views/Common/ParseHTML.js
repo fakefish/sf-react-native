@@ -11,6 +11,7 @@ var React = require('react-native');
 var {
   View,
   Text,
+  Image,
   StyleSheet
 } = React;
 
@@ -22,6 +23,7 @@ var ParseHTML = React.createClass({
                               '<i>': {fontStyle: 'italic'},
                               '<normal>': {fontStyle: 'normal'},
                               '<em>': {fontStyle: 'italic'},
+                              '<img>': {}
                             };
     if(this.props.customTagToStyle){
       for(var i in Object.keys(this.props.customTagToStyle)){
@@ -35,6 +37,7 @@ var ParseHTML = React.createClass({
   _getNextHTMLTag: function(html_code, tags_to_look_for){
     var min = -1;
     var nextTag = "";
+    // console.log(html_code)
     for (var i = 0; i < tags_to_look_for.length; i++) {
       var tag = tags_to_look_for[i];
       var nextIndex = html_code.indexOf(tag);
@@ -52,6 +55,7 @@ var ParseHTML = React.createClass({
     return {"tag": nextTag, "indexStart": min};
   },
   _buildHTMLParseTree: function(html_code){
+    // console.log(html_code)
     return this._buildHTMLParseTreeOverload(html_code, []);
   },
   _buildHTMLParseTreeOverload: function(html_code, segments, style){
@@ -60,6 +64,7 @@ var ParseHTML = React.createClass({
     if(style==undefined)
       style = [];
     var nextTag = this._getNextHTMLTag(html_code, Object.keys(this.state.tagToStyle));
+    // console.log(nextTag)
     if(nextTag.indexStart != -1){
       if(nextTag.indexStart>0){
         segments.push({
@@ -70,11 +75,13 @@ var ParseHTML = React.createClass({
       var endTag = "</"+(nextTag.tag).slice(1);
       var indexEnd = html_code.indexOf(endTag);
       var new_text = html_code.slice(nextTag.indexStart+nextTag.tag.length, indexEnd);
+      // console.log(new_text)
       segments.push({"segments": this._buildHTMLParseTreeOverload(new_text, [], style.concat([this.state.tagToStyle[nextTag.tag]]))});
       return this._buildHTMLParseTreeOverload(html_code.slice(indexEnd+endTag.length, html_code.length), segments);
     }
     else{
       if(html_code!=''){
+        // console.log(html_code)
         segments.push({"text": html_code,
                        "style": style});
       }
@@ -85,6 +92,9 @@ var ParseHTML = React.createClass({
     return parseTree.map((segment)=>{
       if(segment.segments)
         return this._renderHTMLParseTree(segment.segments)
+      if(segment.text.indexOf('<img') == 0) {
+        return <Image style={segment.style} source={{uri:segment.text.match(/\/img\/\w+/g)[0]}} />
+      }
       return <Text style={segment.style}>{segment.text}</Text>;
     });
   },
@@ -101,9 +111,7 @@ var ParseHTML = React.createClass({
   render: function() {
     return (
       <View style={[styles.container, this.props.style]}>
-        <Text>
           {this._renderHTMLParseTree(this._buildHTMLParseTree(this._decodeHTMLEntities(this.props.code)))}
-        </Text>
       </View>
     );
   }
